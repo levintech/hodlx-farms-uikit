@@ -43,13 +43,19 @@ const StyledLink = styled("a")`
   }
 `;
 
+const StyledLogoWithTextIcon = styled.img`
+  margin-left: 16px;
+  margin-right: 32px;
+  height: 48px;
+`;
+
 const Logo: React.FC<Props> = ({ isDark, href }) => {
   const { linkComponent } = useContext(MenuContext);
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
-      <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
+      <StyledLogoWithTextIcon className="mobile-icon" src="/images/logoWithText.svg"/>
+      <StyledLogoWithTextIcon className="desktop-icon" src="/images/logoWithText.svg"/>
     </>
   );
 
