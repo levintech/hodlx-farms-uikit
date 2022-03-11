@@ -18,7 +18,7 @@ const StyledLink = styled("a")`
   display: flex;
   align-items: center;
   .mobile-icon {
-    width: 32px;
+    width: 100px;
     ${({ theme }) => theme.mediaQueries.nav} {
       display: none;
     }
@@ -44,9 +44,8 @@ const StyledLink = styled("a")`
 `;
 
 const StyledLogoWithTextIcon = styled.img`
-  margin-left: 16px;
-  margin-right: 32px;
-  height: 48px;
+  margin-left: 8px;
+  margin-right: 16px;
 `;
 
 const Logo: React.FC<Props> = ({ isDark, href }) => {
@@ -54,8 +53,8 @@ const Logo: React.FC<Props> = ({ isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <StyledLogoWithTextIcon className="mobile-icon" src="/images/logoWithText.svg"/>
-      <StyledLogoWithTextIcon className="desktop-icon" src="/images/logoWithText.svg"/>
+      <StyledLogoWithTextIcon className="mobile-icon" src="/images/logoWithText.png"/>
+      <StyledLogoWithTextIcon className="desktop-icon" src="/images/logoWithText.png"/>
     </>
   );
 

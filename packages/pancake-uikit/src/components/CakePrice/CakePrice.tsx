@@ -23,14 +23,20 @@ const PriceLink = styled.a`
   }
 `;
 
+const StyledImg = styled.img`
+  width: 24px;
+  margin-right: 8px;
+`
+
 const CakePrice: React.FC<Props> = ({ cakePriceUsd, color = "textSubtle" }) => {
   return cakePriceUsd ? (
     <PriceLink
-      href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+      href="https://pancakeswap.finance/swap?outputCurrency=0xbCe2A8350BC759Dc4c9aFDB226a608C17C88d7D9"
       target="_blank"
     >
-      <LogoRound width="24px" mr="8px" />
-      <Text color={color} bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+      {/* <LogoRound width="24px" mr="8px" /> */}
+      <StyledImg src={'/images/tokens/0xbCe2A8350BC759Dc4c9aFDB226a608C17C88d7D9.png'} />
+      <Text color={color} bold>{`$${cakePriceUsd.toFixed(5)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />
